@@ -1,0 +1,13 @@
+app = "bararan"
+primary_region = "ams"
+[build]
+  dockerfile = "docker/php/Dockerfile"
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+[deploy]
+  release_command = "sh -c 'php artisan migrate --force && php artisan db:seed --force'"

@@ -1,0 +1,16 @@
+.git
+.gitignore
+node_modules
+vendor
+storage/logs
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+bootstrap/cache/*
+docker-compose.yml
+docker
+tests
+README.md
+.env
+.env.*
+public/hot
